@@ -1,28 +1,4 @@
-<?php
-try {
 
-  $db = new mysqli ("localhost", "root" , "", "contact_me");
-
-} catch (Exception  $exc) {
-  echo $esc->getTraceAsString();
-}
-  if (isset($_POST ['nama']) && isset($_POST ['email']) && isset($_POST ['phone']) &&        isset($_POST ['message']))  
-  {
-      $nama= $_POST ['nama'];
-      $email= $_POST ['email'];
-      $phone= $_POST ['phone'];
-      $message= $_POST ['message'];
-
-  
-
-   $is_insert = $db->query("INSERT INTO `hubungi_saya`(`nama`, `email`, `phone`, `message`) VALUES ('$nama','$email','$phone','$message')");
-    
-    if ($is_insert == TRUE){
-      echo "<h2>terimakasih, tealah memberi informasi </h2>";
-      exit() ;
-    }
-  }
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -86,21 +62,21 @@ try {
           <img src="img/slider/9.png">
           <div class="caption left-align">
             <h3>terimakasih telah berkunjung</h3>
-            <h5 class="light grey-text text-lighten-3">semoga hari mu menyenangkan dari biasanya</h5>
+            <h5 class="light grey-text text-lighten-3"></h5>
           </div>
         </li>
         <li>
           <img src="img/slider/1.png">
           <div class="caption right-align">
             <h3></h3>
-            <h5 class="light black-text text-lighten-3">ini adalah daftar riwayat hidup saya</h5>
+            <h2 class="light black-text text-lighten-3">ini adalah daftar riwayat hidup saya</h2>
           </div>
         </li>
         <li>
           <img src="img/slider/6.png">
           <div class="caption center-align">
             <h3></h3>
-            <h5 class="light blue-text text-lighten-3">saya sedang mencari pekerjaan bisakah anda membantu saya</h5>
+            <h5 class="light blue-text text-lighten-3">semoga hari mu menyenangkan</h5>
           </div>
         </li>
       </ul>
